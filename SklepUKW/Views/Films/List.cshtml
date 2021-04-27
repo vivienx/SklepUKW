@@ -25,7 +25,7 @@
             <td><a href="@Url.Action("Details", "Films", new { id = film.FilmId})"><img src="@Url.PostersPath(film.PosterName)"></a></td>
             <td>@film.Title</td>
             <td>@film.Price</td>
-            <td>Dodaj do koszyka</td>
+            <td><a href="@Url.Action("AddToCart", "Cart", new { id = film.FilmId})"></a>&#128722;</a></td>
         </tr>
     } 
 <table>
