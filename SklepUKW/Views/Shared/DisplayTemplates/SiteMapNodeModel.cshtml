@@ -3,7 +3,7 @@
 @using MvcSiteMapProvider.Web.Html.Models
 
 @if (Model.IsCurrentNode && Model.SourceMetadata["HtmlHelper"].ToString() != "MvcSiteMapProvider.Web.Html.MenuHelper")  { 
-    <text>@Model.Title</text>
+    <text><a class="disabled">@Model.Title</a></text>
 } else if (Model.IsClickable) { 
     if (string.IsNullOrEmpty(Model.Description))
     {
