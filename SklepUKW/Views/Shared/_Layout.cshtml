@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -9,13 +10,7 @@
 </head>
 <body>
     <header>
-        <div id="menu">
-            <a href="fantasy.html">Fantasy</a>
-            <a href="horror.html">Horror</a>
-            <a href="komedie.html">Komedie</a>
-            <a href="sensacyjne.html">Sensacyjne</a>
-            <a href="thrillery.html">Thrillery</a>
-        </div>
+       @Html.Action("CategoriesMenu", "Films");
     </header>
 
     <div>
@@ -25,9 +20,9 @@
     <footer>
         <div id="stopka">
             <a href="@Url.Action("StaticSite", "Home", new { name = "Onas" })">O nas</a>
-            <a href="regulamin.html">Regulamin</a>
-            <a href="metodyPlatnosci.html">Metody płatności</a>
-            <a href="kontakt.html">Kontakt</a>
+            <a href="@Url.Action("StaticSite", "Home", new { name = "Regulamin" })">Regulamin</a>
+            <a href="@Url.Action("StaticSite", "Home", new { name = "MetodyPlatnosci" })">Metody płatności</a>
+            <a href="@Url.Action("StaticSite", "Home", new { name = "Kontakt" })">Kontakt</a>
         </div>
     </footer>
 </body>
