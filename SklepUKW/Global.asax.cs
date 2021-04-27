@@ -13,6 +13,7 @@ namespace SklepUKW
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
         }
     }
 }
