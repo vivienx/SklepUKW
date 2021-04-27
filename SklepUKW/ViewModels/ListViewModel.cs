@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SklepUKW.ViewModels
 {
-    public class IndexViewModel
+    public class ListViewModel
     {
         public Category Category { get; set; }
 

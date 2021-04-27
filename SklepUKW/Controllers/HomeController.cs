@@ -24,5 +24,10 @@ namespace SklepUKW.Controllers
         {
             return View(name);
         }
+
+        public ActionResult Test()
+        {
+            return View();
+        }
     }
 }
