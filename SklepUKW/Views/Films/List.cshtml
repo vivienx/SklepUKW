@@ -17,7 +17,7 @@
 
 <h2>@Model.Category.Name - @Model.Category.Desc</h2>
 
-@Html.MvcSiteMap().SiteMapPath()
+<h3>@Html.MvcSiteMap().SiteMapPath()</h3>
 <table border=1px>
     @foreach (var film in Model.FilmsFromCategory)
     {
@@ -25,7 +25,7 @@
             <td><a href="@Url.Action("Details", "Films", new { id = film.FilmId})"><img src="@Url.PostersPath(film.PosterName)"></a></td>
             <td>@film.Title</td>
             <td>@film.Price</td>
-            <td><a href="@Url.Action("AddToCart", "Cart", new { id = film.FilmId})"></a>&#128722;</a></td>
+            <td><a href="@Url.Action("AddToCart", "Cart", new { id = film.FilmId})">&#128722;</a></td>
         </tr>
     } 
 <table>

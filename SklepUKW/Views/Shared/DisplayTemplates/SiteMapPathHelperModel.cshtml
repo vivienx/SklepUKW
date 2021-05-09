@@ -3,10 +3,12 @@
 @using System.Linq
 @using MvcSiteMapProvider.Web.Html.Models
 
-@foreach (var node in Model) { 
+@foreach (var node in Model)
+    {
     @Html.DisplayFor(m => node);
-    
-    if (node != Model.Last()) {
-        <text><a class="disabled"> &#10161; </a></text>
+
+    if (node != Model.Last())
+    {
+    <text><span class="disabled"> &#10161; </span></text>
     }
 }
