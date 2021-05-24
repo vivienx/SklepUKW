@@ -35,3 +35,88 @@ table {
     padding: 30px;
     background-color: brown;
 }
+
+ul {
+    list-style-type: none;
+}
+
+#tableSzczegoly {
+    text-align: left;
+    font-size: 30px;
+    padding: 2%;
+}
+
+    #tableSzczegoly img {
+        width: 400px;
+    }
+
+#filmsFromCategory {
+    font-size: 20px;
+    background-color: brown;
+    width: 250px;
+    padding: 30px;
+}
+
+#obrazek {
+    text-align: center;
+}
+
+#filmsFromCategory ul li
+{
+    margin: 0 0 15px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+a img 
+{
+    width: 200px;
+}
+
+footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.disabled {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 5px 5px 10px black;
+}
+
+.SekcjaPrzyciski {
+    overflow: hidden;
+    font-size: 40px;
+}
+
+    .SekcjaPrzyciski :nth-child(1) {
+        float: left;
+    }
+
+    .SekcjaPrzyciski :nth-child(2) {
+        float: right;
+    }
+
+#CenaCalkowita {
+    width: 100%;
+    text-align: right;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    font-size: 35px;
+}
+
+#koszykTabela {
+    border-collapse: collapse;
+    font-size: 30px;
+}
+
+    #koszykTabela tr {
+        border-bottom: 1px solid #DADADA;
+    }

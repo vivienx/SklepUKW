@@ -1,5 +1,6 @@
 ﻿using SklepUKW.DAL;
 using SklepUKW.Models;
+using SklepUKW.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,13 +15,19 @@ namespace SklepUKW.Controllers
 
         // GET: Home
         public ActionResult Index()
-        { 
-            return View();
+        {
+            var top3LongestFilms = db.Films.OrderByDescending(f => f.Length).Take(3);
+            return View(top3LongestFilms);
         }
 
         public ActionResult StaticSite(string name)
         {
             return View(name);
+        }
+
+        public ActionResult Test()
+        {
+            return View();
         }
     }
 }
