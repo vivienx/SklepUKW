@@ -8,13 +8,12 @@ namespace SklepUKW.Infrastructure
 {
     public interface ISessionManager
     {
-        //typy generyczne zastepuja dowolny obiekt
-        void Set<T>(string name, T value);//dwa agumenty: te sesje oraz nazwe
+        void Set<T>(string name, T value);
 
-        T Get<T>(string key); //w nawiaskie klucz/identyfikator dla tej sesji
+        T Get<T>(string key);
 
-        T TryGet<T>(string key); //trycatch
+        T TryGet<T>(string key);
 
-        void Abandon(); //usuwanie sesji
+        void Abandon();
     }
 }

@@ -10,6 +10,6 @@ namespace SklepUKW.ViewModels
     {
         public List<CartItem> CartItems { get; set; }
 
-        public decimal TotalPrice { get; set; } //calkowita wartosc koszyka
+        public decimal TotalPrice { get; set; }
     }
 }

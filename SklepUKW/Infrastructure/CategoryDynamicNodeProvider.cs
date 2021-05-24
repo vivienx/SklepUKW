@@ -22,7 +22,7 @@ namespace SklepUKW.Infrastructure
                     Title = category.Name,
                     Key = "Category_" + category.CategoryId
                 };
-                //akcja dla kategorii ActionResultList z FilmController na wejsciu przyjmuje categoryname
+
                 dn.RouteValues.Add("categoryName", category.Name);
                 categoryDN.Add(dn);
             }

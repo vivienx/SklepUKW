@@ -3,15 +3,15 @@
             xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
             xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
 
-	<mvcSiteMapNode title="Home" controller="Home" action="Index">
-		<mvcSiteMapNode title="" controller="Films" action="List" dynamicNodeProvider="SklepUKW.Infrastructure.CategoryDynamicNodeProvider, SklepUKW">
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+      <mvcSiteMapNode title="" controller="Films" action="List" dynamicNodeProvider="SklepUKW.Infrastructure.CategoryDynamicNodeProvider, SklepUKW">
 
-			<mvcSiteMapNode title="" controller="Films" action="Details" dynamicNodeProvider="SklepUKW.Infrastructure.FilmsDynamicNodeProvider, SklepUKW"/>
-
-		</mvcSiteMapNode>
-
-		<mvcSiteMapNode title="Koszyk" controller="Cart" action="Index"/>
-
-
-	</mvcSiteMapNode>
+          <mvcSiteMapNode title="" controller="Films" action="Details" dynamicNodeProvider="SklepUKW.Infrastructure.FilmsDynamicNodeProvider, SklepUKW"/>
+      
+      </mvcSiteMapNode>
+    
+      <mvcSiteMapNode title="Koszyk" controller="Cart" action="Index"/>
+  
+  
+  </mvcSiteMapNode>
 </mvcSiteMap>

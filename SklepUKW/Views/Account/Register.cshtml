@@ -1,0 +1,29 @@
+﻿@model SklepUKW.ViewModels.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+@using (Html.BeginForm("Register", "Account"))
+{
+@Html.AntiForgeryToken()
+<fieldset>
+    <legend> Rejestracja </legend>
+    @Html.ValidationSummary("") 
+    @Html.LabelFor(u => u.Email, "Email: ")
+    @Html.TextBoxFor(u => u.Email)
+    @Html.ValidationMessageFor(u => u.Email)
+    <br>
+    @Html.LabelFor(u => u.Password, "Hasło: ")
+    @Html.PasswordFor(u => u.Password)
+    @Html.ValidationMessageFor(u => u.Password)
+    <br>
+    @Html.LabelFor(u => u.ConfirmPassword, "Powtórz hasło: ")
+    @Html.PasswordFor(u => u.ConfirmPassword)
+    @Html.ValidationMessageFor(u => u.ConfirmPassword)
+    <br>
+    <br>
+    <input type="submit" value="Zarejestruj" id="buttonRegister">
+
+</fieldset>
+}
+

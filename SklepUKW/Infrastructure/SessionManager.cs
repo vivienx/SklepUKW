@@ -6,27 +6,23 @@ using System.Web.SessionState;
 
 namespace SklepUKW.Infrastructure
 {
-    public class SessionManager : ISessionManager// : dziedzienie z interfejsu. alt enter po wpisaniu : issessionamanager
+    public class SessionManager : ISessionManager
     {
+        HttpSessionState session;
 
-        HttpSessionState session; //obiekt naszej sesji
-        
-        
-        public SessionManager() //inicjalizacja w konstruktorze
+        public SessionManager()
         {
             session = HttpContext.Current.Session;
         }
 
-
         public void Abandon()
         {
-            session.Abandon(); //zamykanie sesji
+            session.Abandon();
         }
 
         public T Get<T>(string key)
         {
-            return (T)session[key]; //pobieranie sesji. zwrocenie sesji o danym kluczu. T - rzutowanie na typ generyczny
-                                    //T -> jakis dowolny obiekt np film
+           return (T)session[key];
         }
 
         public void Set<T>(string name, T value)
@@ -42,7 +38,7 @@ namespace SklepUKW.Infrastructure
             }
             catch (NullReferenceException)
             {
-                return default(T); //w nawiasie typ generyczny
+                return default(T);
             }
         }
     }

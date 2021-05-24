@@ -211,7 +211,7 @@
   <ItemGroup>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\StartUp.Auth.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\FilmsController.cs" />
@@ -223,13 +223,13 @@
     </Compile>
     <Compile Include="Infrastructure\AppConfig.cs" />
     <Compile Include="Infrastructure\Consts.cs" />
-    <Compile Include="Migrations\202105110825210_add_User.cs" />
-    <Compile Include="Migrations\202105110825210_add_User.designer.cs">
-      <DependentUpon>202105110825210_add_User.cs</DependentUpon>
+    <Compile Include="Migrations\202105110824425_add_User.cs" />
+    <Compile Include="Migrations\202105110824425_add_User.designer.cs">
+      <DependentUpon>202105110824425_add_User.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105110922288_Add_UserData.cs" />
-    <Compile Include="Migrations\202105110922288_Add_UserData.designer.cs">
-      <DependentUpon>202105110922288_Add_UserData.cs</DependentUpon>
+    <Compile Include="Migrations\202105110917591_add_UserData.cs" />
+    <Compile Include="Migrations\202105110917591_add_UserData.designer.cs">
+      <DependentUpon>202105110917591_add_UserData.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Infrastructure\CartManager.cs" />
@@ -271,36 +271,38 @@
     <Compile Include="ViewModels\ListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\web.config" />
     <Content Include="Mvc.sitemap" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.6.0.min.map" />
-    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
-    <Content Include="Views\Cart\Index.cshtml" />
-    <Content Include="Views\Films\Details.cshtml" />
-    <Content Include="Views\Films\List.cshtml" />
-    <Content Include="Views\Films\_FilmsFromCategory.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Kontakt.cshtml" />
-    <Content Include="Views\Home\MetodyPlatnosci.cshtml" />
     <Content Include="Views\Home\Onas.cshtml" />
     <Content Include="Views\Home\Regulamin.cshtml" />
-    <Content Include="Views\Home\Test.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+    <Content Include="Views\Home\MetodyPlatnosci.cshtml" />
+    <Content Include="Views\Films\List.cshtml" />
     <Content Include="Views\Shared\_CategoriesMenu.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Films\Details.cshtml" />
+    <Content Include="Views\Films\_FilmsFromCategory.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -310,7 +312,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103300855236_InitialCreate.resx">
@@ -328,11 +329,11 @@
     <EmbeddedResource Include="Migrations\202104261735097_addLengthField.resx">
       <DependentUpon>202104261735097_addLengthField.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105110825210_add_User.resx">
-      <DependentUpon>202105110825210_add_User.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105110824425_add_User.resx">
+      <DependentUpon>202105110824425_add_User.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105110922288_Add_UserData.resx">
-      <DependentUpon>202105110922288_Add_UserData.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105110917591_add_UserData.resx">
+      <DependentUpon>202105110917591_add_UserData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

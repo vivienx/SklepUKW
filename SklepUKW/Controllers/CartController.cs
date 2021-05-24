@@ -11,35 +11,35 @@ namespace SklepUKW.Controllers
 {
     public class CartController : Controller
     {
-        //dostep do koszyka, bazy i sesje
         CartManager cartManager;
         FilmsContext db;
         ISessionManager session;
 
-        //inicjalizacja pol w konstruktorze
         public CartController()
         {
             db = new FilmsContext();
             session = new SessionManager();
-            cartManager = new CartManager(db, session); //uzupelnienie
+            cartManager = new CartManager(db, session);
         }
+
+
         // GET: Cart
         public ActionResult Index()
         {
-            CartViewModel cvm = new CartViewModel()//wyswietlanie w koszyku tabeli, info dot. sztuk, cena
+            CartViewModel cvm = new CartViewModel()
             {
                 CartItems = cartManager.GetCartItems(),
                 TotalPrice = cartManager.GetCartValue()
             };
-            
+
             return View(cvm);
         }
 
-        public ActionResult AddToCart(int id) //akcja wywolania koszyka. przekazanie filmu o danym id
+        public ActionResult AddToCart(int id)
         {
-            cartManager.AddToCart(id); //do koszyka dodajemy film o danym id
+            cartManager.AddToCart(id);
 
-            return RedirectToAction("Index"); //przekierowanie
+            return RedirectToAction("Index");
         }
 
         public ActionResult RemoveFromCart(int id)
