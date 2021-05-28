@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - Wypożyczalnia filmów</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+       @Html.Action("CategoriesMenu", "Films");
+       @Html.Partial("_LoginPartial");
+        <div id="koszyk">
+            <a href="@Url.Action("Index", "Cart")">&#128717; (<span id="cartQuantity"> @Html.Action("GetCartQuantity", "Cart") </span>)</a>
+        </div>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div id="stopka">
+            <a href="@Url.Action("StaticSite", "Home", new { name = "Onas" })">O nas</a>
+            <a href="@Url.Action("StaticSite", "Home", new { name = "Regulamin" })">Regulamin</a>
+            <a href="@Url.Action("StaticSite", "Home", new { name = "MetodyPlatnosci" })">Metody płatności</a>
+            <a href="@Url.Action("StaticSite", "Home", new { name = "Kontakt" })">Kontakt</a>
+        </div>
+    </footer>
+
+    @RenderSection("Scripts", false);
+</body>
+</html>
